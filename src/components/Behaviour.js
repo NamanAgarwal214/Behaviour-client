@@ -3,10 +3,13 @@ import axios from "axios";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import StateContext from "../context/StateContext";
+import DispatchContext from "../context/DispatchContext";
 
 const Behaviour = () => {
   const [behaviour, setBehaviour] = useState([]);
   const state = useContext(StateContext);
+  const appDispatch = useContext(DispatchContext);
+
   useEffect(() => {
     axios
       .get("/api/behaviour/all", {
@@ -19,6 +22,11 @@ const Behaviour = () => {
         setBehaviour(res.data.behaviour[0].behaviour);
       })
       .catch((err) => {
+        appDispatch({
+          type: "FLASH_MESSAGE",
+          value: err.message,
+          status: false,
+        });
         // console.log(err.message);
       });
     // console.log(state);

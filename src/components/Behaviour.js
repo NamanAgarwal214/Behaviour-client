@@ -9,7 +9,7 @@ const Behaviour = () => {
   const [behaviour, setBehaviour] = useState([]);
   const state = useContext(StateContext);
   const appDispatch = useContext(DispatchContext);
-
+  document.title = "Behaviour";
   useEffect(() => {
     axios
       .get("/api/behaviour/all", {

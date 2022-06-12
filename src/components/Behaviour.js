@@ -30,7 +30,7 @@ const Behaviour = () => {
         // console.log(err.message);
       });
     // eslint-disable-next-line
-  }, [state]);
+  }, []);
 
   return (
     <Fragment>

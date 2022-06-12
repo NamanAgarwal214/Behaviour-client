@@ -31,7 +31,7 @@ const Register = (props) => {
         }
       );
       if (res.data.status === "success") {
-        appDispatch({ type: "REGISTER", payload: res.data });
+        appDispatch({ type: "LOGIN", payload: res.data });
         props.onClose();
         // console.log(res.data);
         appDispatch({
@@ -40,6 +40,7 @@ const Register = (props) => {
           status: true,
         });
       } else {
+        props.onClose();
         appDispatch({
           type: "FLASH_MESSAGE",
           value: "Incorrect Email or Password!",

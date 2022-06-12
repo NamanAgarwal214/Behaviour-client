@@ -34,7 +34,6 @@ function App() {
 
   const reducer = (state, action) => {
     switch (action.type) {
-      case "REGISTER":
       case "LOGIN":
         localStorage.setItem("user", JSON.stringify(action.payload.user));
         localStorage.setItem("token", action.payload.token);

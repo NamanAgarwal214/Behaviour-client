@@ -30,7 +30,8 @@ const Register = (props) => {
           withCredentials: true,
         }
       );
-      if (res.data.status === "success") {
+      console.log(res.data);
+      if (res.data.token) {
         appDispatch({ type: "LOGIN", payload: res.data });
         props.onClose();
         // console.log(res.data);

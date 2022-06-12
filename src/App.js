@@ -11,7 +11,7 @@ import Landing from "./components/Landing";
 import IsUserRedirect from "./components/IsUserRedirect";
 import ResetFrom from "./components/ResetFrom";
 import FlashMessage from "./components/FlashMessage";
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://my-project-behave.herokuapp.com/";
 
 function App() {
   const [show, setShow] = useState(false);

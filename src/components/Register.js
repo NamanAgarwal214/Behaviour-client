@@ -17,7 +17,6 @@ const Register = (props) => {
         value: "Please fill the form completely!",
         status: false,
       });
-      console.log("sorry");
     }
     try {
       const res = await axios.post(
@@ -34,9 +33,9 @@ const Register = (props) => {
       if (res.data && res.data.token) {
         appDispatch({ type: "REGISTER", payload: res.data });
         props.onClose();
-        console.log(res.data);
+        // console.log(res.data);
       } else {
-        console.log("some error");
+        // console.log("some error");
       }
       appDispatch({
         type: "FLASH_MESSAGE",
@@ -51,7 +50,6 @@ const Register = (props) => {
         value: err.message,
         status: false,
       });
-      console.log(err.message);
     }
   };
 

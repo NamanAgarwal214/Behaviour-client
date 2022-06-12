@@ -29,7 +29,7 @@ const Login = (props) => {
       );
       // console.log(res.data.cookie);
       if (res.data && res.data.token) {
-        console.log(res.data);
+        // console.log(res.data);
         appDispatch({
           type: "LOGIN",
           payload: res.data,
@@ -46,7 +46,7 @@ const Login = (props) => {
           value: "Incorrect Email or Password!",
           status: false,
         });
-        console.log(res.data);
+        // console.log(res.data);
       }
       // console.log(ctx);
     } catch (error) {
@@ -55,7 +55,7 @@ const Login = (props) => {
         value: error.message,
         status: false,
       });
-      console.log("There was an error");
+      // console.log("There was an error");
     }
   };
 
@@ -78,7 +78,7 @@ const Login = (props) => {
           value: "A mail has been sent to you with a token!",
           status: true,
         });
-        console.log(res.data);
+        // console.log(res.data);
       } else {
         appDispatch({
           type: "FLASH_MESSAGE",
@@ -92,7 +92,7 @@ const Login = (props) => {
         value: error.message,
         status: false,
       });
-      console.log("There was an error");
+      // console.log("There was an error");
     }
   };
 

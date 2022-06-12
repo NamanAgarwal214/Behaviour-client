@@ -33,7 +33,7 @@ const Navbar = (props) => {
         value: error.message,
         status: false,
       });
-      console.log(error.message);
+      // console.log(error.message);
     }
   };
 

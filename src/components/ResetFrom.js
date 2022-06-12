@@ -25,7 +25,7 @@ const ResetFrom = (props) => {
           value: "Your password was updated!",
           status: true,
         });
-        console.log(res.data);
+        // console.log(res.data);
         appDispatch({ type: "LOGIN", payload: res.data });
 
         navigate("/", { replace: true });
@@ -42,7 +42,7 @@ const ResetFrom = (props) => {
         value: error.message,
         status: false,
       });
-      console.log("There was an error");
+      // console.log("There was an error");
     }
   };
 

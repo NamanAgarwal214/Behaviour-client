@@ -15,13 +15,13 @@ const Behaviour = () => {
         },
       })
       .then((res) => {
-        console.log(res.data.behaviour[0].behaviour);
+        // console.log(res.data.behaviour[0].behaviour);
         setBehaviour(res.data.behaviour[0].behaviour);
       })
       .catch((err) => {
-        console.log(err.message);
+        // console.log(err.message);
       });
-    console.log(state);
+    // console.log(state);
   }, [state]);
 
   return (

@@ -44,7 +44,7 @@ const Habit = () => {
         value: error.message,
         status: false,
       });
-      console.log(error.message);
+      // console.log(error.message);
     }
   };
 
@@ -62,7 +62,7 @@ const Habit = () => {
           },
         }
       );
-      console.log(res.data);
+      // console.log(res.data);
       if (res.data.status === "success") {
         appDispatch({
           type: "FLASH_MESSAGE",
@@ -130,7 +130,7 @@ const Habit = () => {
       })
       .then((res) => {
         setHabit(res.data.improvement);
-        console.log(res.data);
+        // console.log(res.data);
       })
       .catch((err) => {
         appDispatch({
@@ -138,7 +138,7 @@ const Habit = () => {
           value: err.message,
           status: false,
         });
-        console.log(err.message);
+        // console.log(err.message);
       });
     // eslint-disable-next-line
   }, [num, state.token]);

@@ -34,14 +34,19 @@ const Register = (props) => {
         appDispatch({ type: "REGISTER", payload: res.data });
         props.onClose();
         // console.log(res.data);
+        appDispatch({
+          type: "FLASH_MESSAGE",
+          value: "You signed in successfully!",
+          status: true,
+        });
       } else {
+        appDispatch({
+          type: "FLASH_MESSAGE",
+          value: "Incorrect Email or Password!",
+          status: false,
+        });
         // console.log("some error");
       }
-      appDispatch({
-        type: "FLASH_MESSAGE",
-        value: "You signed in successfully!",
-        status: true,
-      });
 
       // navigate("/", { replace: true });
     } catch (err) {
